@@ -6,7 +6,7 @@ import os
 
 
 
-keywords = [  "BTS 정국"]
+keywords = [ "BTS RM", "BTS 진", "BTS 슈가", "BTS 제이홉", "BTS 지민", "BTS 뷔", "BTS 정국"]
 
 for keyword in keywords :
 
