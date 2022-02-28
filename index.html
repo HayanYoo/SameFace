@@ -55,9 +55,6 @@
     </section>
 
 
-    <div>Teachable Machine Image Model</div>
-    <button type="button" onclick="init()">Start</button>
-    <button type="button" onclick="predict()">Predict</button>
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <div class="container file-upload">
 
@@ -70,6 +67,8 @@
         </div>
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <p class="result-message"></p>
+            <div id="label-container"></div>
             <div class="image-title-wrap">
                 <button type="button" onclick="removeUpload()" class="remove-image">Remove
                     <span class="image-title">Uploaded Image</span>
@@ -80,7 +79,6 @@
 
 
     <div id="webcam-container"></div>
-    <div id="label-container"></div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
@@ -115,6 +113,34 @@
             // predict can take in an image, video or canvas html element
             var image = document.getElementById("face-image")
             const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability))
+            var resultMessage
+            switch (prediction[0].className) {
+                case "진":
+                resultMessage = "진"
+                    break;
+                case "제이홉":
+                resultMessage = "제이홉"
+                    break;
+                case "슈가":
+                resultMessage = "슈가"
+                    break;
+                case "정국":
+                resultMessage = "정국"
+                    break;
+                case "뷔":
+                resultMessage = "뷔"
+                    break;
+                case "지민":
+                resultMessage = "지민"
+                    break;
+                case "RM":
+                resultMessage = "RM"
+                    break;
+                default:
+                    break;
+            }
+            $('.result-message').html(resultMessage)
             for (let i = 0; i < maxPredictions; i++) {
                 const classPrediction =
                     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
@@ -135,6 +161,10 @@
                     $('.image-title').html(input.files[0].name);
                 };
                 reader.readAsDataURL(input.files[0]);
+                init().then(() =>
+                    predict()
+                )
+
             } else {
                 removeUpload();
             }
