@@ -1,15 +1,17 @@
 body {
-	font-family: sans-serif;
-	background-color: #ffffff;
-}
-.file-upload {
-    padding: 15% 3%;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: solid 1.5px #f6f7fa;
-    background-color: #f6f7fa;
-}
-.file-upload-btn {
+    font-family: 'Jua', sans-serif;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    color: #35465d;
+  }
+  .file-upload {
+      padding: 15% 3%;
+      margin: 0 auto;
+      border-radius: 10px;
+      border: solid 1.5px #f6f7fa;
+      background-color: #f6f7fa;
+  }
+  .file-upload-btn {
     width: 100%;
     margin: 0;
     color: #fff;
@@ -22,22 +24,29 @@ body {
     outline: none;
     text-transform: uppercase;
     font-weight: 700;
-}
-.file-upload-btn:hover {
+  }
+  
+  .file-upload-btn:hover {
     background: #1AA059;
     color: #ffffff;
     transition: all .2s ease;
     cursor: pointer;
-}
-.file-upload-btn:active {
-	border: 0;
-	transition: all 0.2s ease;
-}
-.file-upload-content {
-	display: none;
-	text-align: center;
-}
-.file-upload-input {
+  }
+  
+  .file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+  
+  .file-upload-content {
+    display: none;
+    text-align: center;
+  }
+  #loading {
+    display: none;
+  }
+  
+  .file-upload-input {
     position: absolute;
     margin: 0;
     padding: 0;
@@ -46,94 +55,98 @@ body {
     outline: none;
     opacity: 0;
     cursor: pointer;
-}
-.image-upload-wrap {
-    width: 60%;
-    margin: 0 auto;
-    position: relative;
-    object-fit: contain;
-    border-radius: 10px;
-    border: dashed 1.5px #35465d;
-    background-color: #ffffff;
-}
-.image-dropping,
-.image-upload-wrap:hover {
-    background-color: #35465d82;
-    border: 1.5px dashed #ffffff;
-}
-.image-title-wrap {
-	padding: 0 15px 15px 15px;
-	color: #222;
-}
-.drag-text {
-	text-align: center;
-}
-.drag-text h3 {
-	font-weight: 100;
-	text-transform: uppercase;
-	padding: 60px 0;
-}
-.file-upload-image {
-	max-height: 200px;
-	max-width: 200px;
-	margin: auto;
-	padding: 20px;
-}
-.remove-image {
-	width: 200px;
-	margin: 0;
-	color: #fff;
-	background: #cd4535;
-	border: none;
-	padding: 10px;
-	border-radius: 4px;
-	border-bottom: 4px solid #b02818;
-	transition: all 0.2s ease;
-	outline: none;
-	text-transform: uppercase;
-	font-weight: 700;
-}
-.remove-image:hover {
-	background: #c13b2a;
-	color: #ffffff;
-	transition: all 0.2s ease;
-	cursor: pointer;
-}
-.remove-image:active {
-	border: 0;
-	transition: all 0.2s ease;
-}
-.nav_distance{
-    padding: 2.1% 7.7%;
-}
-
-.navbar-light .navbar-brand {
+  }
+  
+  .image-upload-wrap {
+      width: 60%;
+      margin: 0 auto;
+      position: relative;
+      object-fit: contain;
+      border-radius: 10px;
+      border: dashed 1.5px #35465d;
+      background-color: #ffffff;
+  }
+  
+  .image-dropping,
+  .image-upload-wrap:hover {
+      background-color: #35465d82;
+      border: 1.5px dashed #ffffff;
+  }
+  
+  .image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+  }
+  
+  .drag-text {
+    text-align: center;
+  }
+  
+  .drag-text h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .file-upload-image {
+    max-height: 60%;
+    max-width: 60%;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .try-again-btn {
+    border-radius: 40px;
+    border: solid 1.5px #35465d;
+    background-color: #35465d;
+  }
+  
+  .try-again-text {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 4px 15px;
+  }
+  
+  .remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+  
+  .navbar-light .navbar-brand {
     line-height: 1.68;
     text-align: left;
     color: #35465d; 
   }
-
+  
   .navbar-light .navbar-toggler {
       border-color: #ffffff;
   }
-
-  .section {
-      margin-top: 100px;
-  }
-
   
-.title {
+  .section {
+      margin-top: 50px;
+  }
+  
+  .title {
     line-height: 1.67;
     text-align: center;
     color: #35465d;
   }
-
+  
   .subtitle {
     line-height: 1.53;
     text-align: center;
     color: #35465d;
   }
-
+  
+  /* On screens that are 600px or less, set the background color to olive */
   @media screen and (max-width: 600px) {
     html {
       font-size: 10px;
@@ -143,40 +156,249 @@ body {
       }
   }
   
-
   
-.youtube-link {
-    font-family: NanumSquareR;
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
-}
-
+  .youtube-link {
+      font-size: 1.5rem;
+      line-height: 1.71;
+      text-align: center;
+      color: #f73737;
+      text-decoration: underline;
+  }
   
-.youtube-link:hover {
-    font-family: NanumSquareR;
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
+  .youtube-link:hover {
+      font-size: 1.5rem;
+      line-height: 1.71;
+      text-align: center;
+      color: #f73737;
+      text-decoration: underline;
+  }
+  
+  .youtube-icon {
+      width: 30px;
+      height: 27.262px;
+  }
+  
+  .upload {
+      width: 20%;
+  }
+  
+  .upload-text {
+      width: 58%;
+      font-size: 1.5rem;
+      line-height: 1.53;
+      text-align: center;
+      color: #35465d;
+      margin: 0 auto;
+  }
+  
+  .footer {
+      background-color: initial;
+      color: initial;
+  }
+  
+  .bar-container {
+    height: 2.7rem;
+  }
+  .진-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(117, 204, 84, 0.2);
+  }
+  .진-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(117, 204, 84, 1);
+  }
+  .제이홉-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(117, 204, 84, 0.2);
+  }
+  .제이홉-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(117, 204, 84, 1);
+  }
+  .슈가-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(27, 175, 234, 0.2);
+  }
+  .슈가-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(27, 175, 234, 1);
+  }
+  .RM-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(251, 176, 59, 0.2);
+  }
+  .RM-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(251, 176, 59, 1);
+  }
+  .지민-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(195, 140, 102, 0.2);
+  }
+  .지민-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(195, 140, 102, 1);
+  }
+  .정국-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(49, 132, 155, 0.2);
+  }
+  .정국-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(49, 132, 155, 1);
+  }
+  .뷔-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(235, 166, 190, 0.2);
+  }
+  .뷔-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(235, 166, 190, 1);
+  }
+  .percent-text {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  .animal-label {
+      width: 20%;
+      text-align: left;
+      height: 2rem;
+  }
+  #label-container {
+      width: 80%;
+      margin: 0 auto;
+  }
+  .result-message {
+      font-size: 2rem;
+  }
+  
+  
+  .animal-explain {
+      font-size: 1.5rem;
+  }
+  .진-title {
+      color: #3ba363;
+  }
+  .진-celeb {
+      color: #3ba363;
+      font-size: 1.2rem;
+  }
+  .제이홉-title {
+      color: #3ba363;
+  }
+  .제이홉-celeb {
+      color: #3ba363;
+      font-size: 1.2rem;
+  }
+  .슈가-title {
+      color: #ff6c0a;
+  }
+  .슈가-celeb {
+      color: #ff6c0a;
+      font-size: 1.2rem;
+  }
+  .정국-title {
+      color: #548dd4;
+  }
+  .정국-celeb {
+      color: #548dd4;
+      font-size: 1.2rem;
+  }
+  .뷔-title {
+      color: #e56995;
+  }
+  .뷔-celeb {
+      color: #e56995;
+      font-size: 1.2rem;
+  }
+  .지민-title {
+      color: #9b6b43;
+  }
+  .지민-celeb {
+      color: #9b6b43;
+      font-size: 1.2rem;
+  }
+  .RM-title {
+      color: #31849b;
+  }
+  .RM-celeb {
+      color: #31849b;
+      font-size: 1.2rem;
+  }
+  
+  .sr-only {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    clip: rect(0,0,0,0);
+
 }
 
-.youtube-icon {
-    width : 8%
-}
 
-.upload {
-    width : 20%
-}
-
-.upload-text {
-    width: 58%;
-    font-size: 1.5rem;
-    line-height: 1.53;
-    text-align: center;
-    color: #35465d;
-    margin: 0 auto;
-}
