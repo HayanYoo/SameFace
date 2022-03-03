@@ -223,7 +223,7 @@ body {
     height: 2rem;
     border-radius: 10px;
     width: 100%;
-    background-color: rgba(117, 204, 84, 0.2);
+    background-color: rgb(239, 226, 199);
   }
   .제이홉-bar {
     position: absolute;
@@ -231,7 +231,7 @@ body {
     left: 0;
     height: 2rem;
     border-radius: 10px;
-    background-color: rgba(117, 204, 84, 1);
+    background-color: rgb(198, 178, 87);
   }
   .슈가-box {
     position: absolute;
